@@ -12,6 +12,7 @@ export class ProductListComponent {
   imageWidth: number = 50;
   imageMargin: number = 2;
   showImage: boolean = false;
+  errorMessage: any;
   filteredProducts: IProduct[]; // why does this need to be here is instance prop?
 
   _listFilter: string;
@@ -46,7 +47,13 @@ export class ProductListComponent {
   }
 
   ngOnInit(): void {
-    this.products = this.productService.getProducts();
-    this.filteredProducts = this.products;
+    this.productService.getProducts().subscribe(
+      products => {
+        this.products = products,
+        this.filteredProducts = this.products;
+      },
+        error => this.errorMessage = <any>error
+    );
+    
   }
 }
