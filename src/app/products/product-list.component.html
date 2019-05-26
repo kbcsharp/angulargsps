@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-header">
-    Product List
+    {{ title }}
   </div>
   <div class="card-body">
     <div class="row">
@@ -10,13 +10,13 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-2">
         <h4>Filtered by:</h4>
       </div>
     </div>
   </div>
   <div class="table-responsive">
-    <table class="table">
+    <table class="table" *ngIf="products && products.length">
       <thead>
         <tr>
           <th>
@@ -31,7 +31,16 @@
           <th>5 Star Rating</th>
         </tr>
       </thead>
-      <tbody></tbody>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td></td>
+          <td>{{ product.productName }}</td>
+          <td>{{ product.productCode }}</td>
+          <td>{{ product.releaseDate }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.starRating }}</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </div>
