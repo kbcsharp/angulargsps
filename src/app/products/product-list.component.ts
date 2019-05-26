@@ -11,6 +11,7 @@ export class ProductListComponent {
   imageWidth: number = 50;
   imageMargin: number = 2;
   showImage: boolean = false;
+  filteredProducts: IProduct[];// why does this need to be here is instance prop?
 
   _listFilter: string;
   get listFilter(): string {
