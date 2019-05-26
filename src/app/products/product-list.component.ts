@@ -49,7 +49,7 @@ export class ProductListComponent {
 
   constructor() {
     this.filteredProducts = this.products;
-    this.listFilter = "cart";
+    this.listFilter = "";
   }
 
   performFilter(filterBy: string): IProduct[] {
