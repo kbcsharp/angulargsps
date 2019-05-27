@@ -1,0 +1,9 @@
+li {
+   list-style: none;
+   line-height: 2rem;
+}
+
+.card-body-flex {
+    display: flex;
+    justify-content: space-between;
+}

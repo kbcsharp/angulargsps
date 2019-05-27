@@ -2,6 +2,21 @@
   <div class="card-header">
     {{ title + ": " + product.productName }}
   </div>
+  <div class="card-body card-body-flex">
+    <div>
+      <ul>
+        <li>Product Id: {{ product.productId }}</li>
+        <li>Product Code: {{ product.productCode }}</li>
+        <li>Product Release Date: {{ product.releaseDate }}</li>
+        <li>Product Description: {{ product.description }}</li>
+        <li>Product Price: {{ product.price }}</li>
+        <li>Product Star Rating: {{ product.starRating }}</li>
+      </ul>
+    </div>
+    <div>
+      <img [src]= "product.imageUrl"/>
+    </div>
+  </div>
   <div class="card-footer">
     <button
       class="btn btn-outline-secondary"
