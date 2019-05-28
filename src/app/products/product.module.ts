@@ -12,7 +12,7 @@ import { SharedModule } from '../shared/shared.module';
     ProductListComponent,
     ProductDetailComponent,
     ConvertToSpacesPipe,
-
+    
   ],
   imports: [
     FormsModule,
