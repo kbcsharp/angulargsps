@@ -9,12 +9,12 @@
         <li>Product Code: {{ product.productCode }}</li>
         <li>Product Release Date: {{ product.releaseDate }}</li>
         <li>Product Description: {{ product.description }}</li>
-        <li>Product Price: {{ product.price }}</li>
+        <li>Product Price: {{ product.price | currency }}</li>
         <li>Product Star Rating: {{ product.starRating }}</li>
       </ul>
     </div>
     <div>
-      <img [src]= "product.imageUrl"/>
+      <img [src]="product.imageUrl" />
     </div>
   </div>
   <div class="card-footer">
